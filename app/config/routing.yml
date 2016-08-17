@@ -6,3 +6,8 @@ app_web_bad:
     resource: "@AppBundle/Controller/Web/Bad"
     type:     annotation
     prefix: /bad
+
+app_web_good:
+    resource: "@AppBundle/Controller/Web/Good"
+    type:     annotation
+    prefix: /good
