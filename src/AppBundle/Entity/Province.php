@@ -24,7 +24,7 @@ class Province
     /**
      * @var string
      *
-     * @ORM\Column(name="abbreviation", type="string", length=2, unique=true)
+     * @ORM\Column(name="abbreviation", type="string", length=2)
      */
     private $abbreviation;
 
@@ -48,6 +48,14 @@ class Province
      * @ORM\Column(name="createdAt", type="date")
      */
     private $createdAt;
+
+    /**
+     * Province constructor.
+     */
+    public function __construct()
+    {
+        $this->createdAt = new \DateTime();
+    }
 
     /**
      * Get id.

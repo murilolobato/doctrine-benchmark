@@ -1,0 +1,7 @@
+AppBundle\Entity\User:
+    user_{1..8000}:
+        name: <name()>
+        city: '@city*'
+        birthday: <dateTimeThisCentury()>
+        username: <userName()>
+

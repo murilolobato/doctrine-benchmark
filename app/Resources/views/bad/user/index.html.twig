@@ -10,6 +10,7 @@
                 <th>Name</th>
                 <th>Birthday</th>
                 <th>Username</th>
+                <th>City name(wtf)</th>
                 <th>Createdat</th>
                 <th>Actions</th>
             </tr>
@@ -21,7 +22,8 @@
                 <td>{{ user.name }}</td>
                 <td>{% if user.birthday %}{{ user.birthday|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ user.username }}</td>
-                <td>{{ user.createdAt }}</td>
+                <td>{{ user.city.name }}</td>
+                <td>{{ user.createdAt | date('Y-m-d') }}</td>
                 <td>
                     <ul>
                         <li>

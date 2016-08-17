@@ -1,0 +1,4 @@
+AppBundle\Entity\Province:
+    province_{1..27}:
+        abbreviation: <stateAbbr()>
+        name: <state()>
