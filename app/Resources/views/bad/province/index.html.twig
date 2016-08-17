@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Province list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Abbreviation</th>
+                <th>Name</th>
+                <th>Createdat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for province in provinces %}
+            <tr>
+                <td><a href="{{ path('web_bad_province_show', { 'id': province.id }) }}">{{ province.id }}</a></td>
+                <td>{{ province.abbreviation }}</td>
+                <td>{{ province.name }}</td>
+                <td>{% if province.createdAt %}{{ province.createdAt|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('web_bad_province_show', { 'id': province.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('web_bad_province_edit', { 'id': province.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('web_bad_province_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}
