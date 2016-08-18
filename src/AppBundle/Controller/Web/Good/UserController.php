@@ -26,7 +26,7 @@ class UserController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $users = $em->getRepository('AppBundle:User')->findAll();
+        $users = $em->getRepository('AppBundle:User')->findAllForGoodUserIndex();
 
         return $this->render('good/user/index.html.twig', array(
             'users' => $users,
